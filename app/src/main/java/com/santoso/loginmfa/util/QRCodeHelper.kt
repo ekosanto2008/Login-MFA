@@ -1,4 +1,4 @@
-package com.santoso.loginmfa
+package com.santoso.loginmfa.util
 
 import android.graphics.Bitmap
 import androidx.core.graphics.createBitmap

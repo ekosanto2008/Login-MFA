@@ -1,4 +1,4 @@
-package com.santoso.loginmfa
+package com.santoso.loginmfa.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

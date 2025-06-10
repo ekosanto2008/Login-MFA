@@ -1,4 +1,4 @@
-package com.santoso.loginmfa
+package com.santoso.loginmfa.util
 
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.binary.Base32
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.binary.Hex

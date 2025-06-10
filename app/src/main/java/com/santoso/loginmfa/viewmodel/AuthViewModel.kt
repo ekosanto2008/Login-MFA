@@ -1,9 +1,13 @@
-package com.santoso.loginmfa
+package com.santoso.loginmfa.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.santoso.loginmfa.util.GoogleMFAHelper
+import com.santoso.loginmfa.repository.UserRepository
+import com.santoso.loginmfa.data.local.AppDatabase
+import com.santoso.loginmfa.data.model.User
 import kotlinx.coroutines.launch
 
 class AuthViewModel(application: Application) : AndroidViewModel(application) {
@@ -31,7 +35,11 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
     fun login(username: String, password: String, otp: String) {
         viewModelScope.launch {
             val user = repository.getUser(username)
-            if (user != null && user.password == password && GoogleMFAHelper.verifyCode(user.mfaSecret, otp)) {
+            if (user != null && user.password == password && GoogleMFAHelper.verifyCode(
+                    user.mfaSecret,
+                    otp
+                )
+            ) {
                 loginResult.postValue(true)
             } else {
                 loginResult.postValue(false)

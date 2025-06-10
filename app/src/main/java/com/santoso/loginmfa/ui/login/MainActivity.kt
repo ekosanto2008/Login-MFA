@@ -1,16 +1,13 @@
-package com.santoso.loginmfa
+package com.santoso.loginmfa.ui.login
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.santoso.loginmfa.viewmodel.AuthViewModel
+import com.santoso.loginmfa.ui.register.RegisterActivity
 import com.santoso.loginmfa.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

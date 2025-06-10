@@ -1,9 +1,10 @@
-package com.santoso.loginmfa
+package com.santoso.loginmfa.data.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.santoso.loginmfa.data.model.User
 
 @Database(entities = [User::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
